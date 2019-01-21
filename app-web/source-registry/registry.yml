@@ -13,18 +13,46 @@ sources:
         - 'Designer'
         - 'Developer'
     resourceType: 'Components'
-  - name: Signing Tool
-    sourceType: 'github'
-    sourceProperties:
-      url: https://github.com/bcgov/devhub-signing-web/
-      owner: bcgov
-      repo: 'devhub-signing-web'
+  - name: Developer Tools
+    description: "Tools to assist software developers in building, deploying, and running applications for BC Gov."
     attributes:
-      labels:
-        - Self Service
-        - Repository
-      persona: 'Developer'
-    resourceType: 'Self-Service Tools'
+      personas:
+      - 'Developer'
+    sourceProperties:
+      sources:
+        - sourceType: 'github'
+          sourceProperties:
+            url: https://github.com/BCDevOps/openshift-wiki
+            owner: BCDevOps
+            repo: 'openshift-wiki'
+            files:
+            - docs/API/KongAPI.md
+        - sourceType: 'web'
+          sourceProperties:
+            url: https://signing-web-devhub-prod.pathfinder.gov.bc.ca
+        - sourceType: 'github'
+          sourceProperties:
+            url: https://github.com/bcgov/devhub-resources/
+            owner: bcgov
+            repo: 'devhub-resources'
+        - sourceType: 'web'
+          sourceProperties:
+            url: https://catalogue.data.gov.bc.ca/
+  - name: Community Enablers
+    description: "Tools that foster collaboration and communication across the BC Gov developer community."
+    attributes:
+      personas:
+      - 'Developer'
+      - 'Designer'
+      - 'Product Owner'
+    sourceProperties:
+      sources:
+        - sourceType: 'web'
+          sourceProperties:
+            url: https://devopspathfinder.slack.com/
+        - sourceType: 'web'
+          sourceProperties:
+            url: https://www.yammer.com/gov.bc.ca/#/threads/inGroup?type=in_group&feedId=11241672&view=all
   - name: Open Shift Wiki
     sourceType: 'github'
     template: overview
@@ -34,6 +62,7 @@ sources:
       repo: 'openshift-wiki'
       ignores:
       - docs/OCP/OCPServiceDefinition.md
+      - docs/API/KongAPI.md
     resourceType: 'Documentation'
     attributes:
       labels:
@@ -126,7 +155,6 @@ sources:
           repo: openshift-wiki
           owner: bcdevops
           url: https://github.com/BCDevOps/openshift-wiki
-          branch: feature/243-openshift-svc-def
           files:
           - docs/OCP/OCPServiceDefinition.md
   
