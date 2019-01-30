@@ -13,6 +13,42 @@ sources:
         - 'Designer'
         - 'Developer'
     resourceType: 'Components'
+  - name: Github 101
+    template: overview
+    description: "Whether you are new to Github as a platform or new to Github in government, here are
+    some great resources and considerations to help you succeed."
+    resourceType: Documentation
+    attributes:
+      persona: Developer
+    sourceProperties:
+      sources:
+      - sourceType: github
+        sourceProperties:
+          url: https://github.com/bcgov/BC-Policy-Framework-For-GitHub
+          owner: bcgov
+          repo: BC-Policy-Framework-For-GitHub
+          files:
+          - github/README.md
+          - BC-Open-Source-Development-Employee-Guide/appropriate-use.md
+          - github/flow.md
+      - sourceType: web
+        sourceProperties:
+          url: https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
+      - sourceType: web
+        sourceProperties:
+          url: https://hackernoon.com/a-branching-and-releasing-strategy-that-fits-github-flow-be1b6c48eca2
+      - sourceType: github
+        sourceProperties:
+          url: https://github.com/bcgov/BC-Policy-Framework-For-GitHub
+          owner: bcgov
+          repo: BC-Policy-Framework-For-GitHub
+          files:
+          - BC-Open-Source-Development-Employee-Guide/Security.md
+          - BC-Open-Source-Development-Employee-Guide/Licenses.md
+          - BC-Open-Source-Development-Employee-Guide/Collaborating-Contributing.md
+          - BC-Gov-Org-HowTo/SAMPLE-CODE_OF_CONDUCT.md
+          - BC-Gov-Org-HowTo/SAMPLE-CONTRIBUTING.md
+          - BC-Gov-Org-HowTo/SAMPLE-README.md
   - name: Developer Tools
     description: "Tools to assist software developers in building, deploying, and running applications for BC Gov."
     attributes:
@@ -72,6 +108,38 @@ sources:
             title: DevOps Commons Yammer Group
             description: The DevOps Commons Group in the BC Gov Yammer community is focused on growing and evolving the BCGov DevOps community.
             image: https://upload.wikimedia.org/wikipedia/commons/0/09/Yammer_logo.svg
+  - name: 'Authentication and Authorization'
+    description: 'Technical resources related to implementing authentication and authorization in government applications.'
+    template: overview
+    sourceProperties:
+      sources:
+      - sourceType: 'web'
+        sourceProperties:
+          url: 'https://sso.pathfinder.gov.bc.ca/'
+          author: cvarjao
+          title: 'Red Hat Single Sign On (aka KeyCloak)'
+          description: "Red Hat Single Sign On is a modern, developer-friendly single sign on solution implementing the OpenID Connect specification as well as SAML.  The BC Gov implementation provides built-in intregration with IDIR, BCeID and GitHub and allow application developers to quickly meet the authentication needs of their applications. Red Hat SSO is the downstream, commercially supported distribution of the open source KeyCloak product."
+          image: 'http://design.jboss.org/keycloak/logo/images/keycloak_logo_600px.svg'
+      - sourceType: 'web'
+        sourceProperties:
+          url: 'https://sminfo.gov.bc.ca/docs/Provincial%20IDIM%20Program%20-%20Building%20SiteMinder%20Integrated%20Apps%202.0.4.pdf'
+          title: 'Building SiteMinder Integrated Applications'
+          description: 'This document describes the methods that can be used to integrate web applications with the
+                        BC Governments SiteMinder infrastructure. \n
+                        This document is intended for the architects, designers and developers producing web
+                        applications that integrate with the IDIM SiteMinder service.'
+  - name: 'DevOps Platform Service Definitions'
+    description: 'Service Definitions provide concise descriptions of the Services provided by DevOps Platform Services team.'
+    sourceProperties:
+      sources:
+      - sourceType: 'github'
+        resourceType: 'Documentation'
+        sourceProperties:
+          repo: openshift-wiki
+          owner: bcdevops
+          url: https://github.com/BCDevOps/openshift-wiki
+          files:
+          - docs/OCP/OCPServiceDefinition.md
   - name: Open Shift Wiki
     sourceType: 'github'
     template: overview
@@ -128,52 +196,5 @@ sources:
       labels:
         - Repository
       persona: 'Developer'
-  - name: Github 101
-    template: overview
-    description: "Whether you are new to Github as a platform or new to Github in government, here are
-    some great resources and considerations to help you succeed."
-    resourceType: Documentation
-    attributes:
-      persona: Developer
-    sourceProperties:
-      sources:
-        - sourceType: github
-          sourceProperties:
-            url: https://github.com/bcgov/BC-Policy-Framework-For-GitHub
-            owner: bcgov
-            repo: BC-Policy-Framework-For-GitHub
-            files:
-              - github/README.md
-              - BC-Open-Source-Development-Employee-Guide/appropriate-use.md
-              - github/flow.md
-        - sourceType: web
-          sourceProperties:
-            url: https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
-        - sourceType: web
-          sourceProperties:
-            url: https://hackernoon.com/a-branching-and-releasing-strategy-that-fits-github-flow-be1b6c48eca2
-        - sourceType: github
-          sourceProperties:
-            url: https://github.com/bcgov/BC-Policy-Framework-For-GitHub
-            owner: bcgov
-            repo: BC-Policy-Framework-For-GitHub
-            files:
-              - BC-Open-Source-Development-Employee-Guide/Security.md
-              - BC-Open-Source-Development-Employee-Guide/Licenses.md
-              - BC-Open-Source-Development-Employee-Guide/Collaborating-Contributing.md
-              - BC-Gov-Org-HowTo/SAMPLE-CODE_OF_CONDUCT.md
-              - BC-Gov-Org-HowTo/SAMPLE-CONTRIBUTING.md
-              - BC-Gov-Org-HowTo/SAMPLE-README.md
-  - name: 'DevOps Platform Service Definitions'
-    description: 'Service Definitions provide concise descriptions of the Services provided by DevOps Platform Services team.'
-    sourceProperties:
-      sources:
-      - sourceType: 'github'
-        resourceType: 'Documentation'
-        sourceProperties:
-          repo: openshift-wiki
-          owner: bcdevops
-          url: https://github.com/BCDevOps/openshift-wiki
-          files:
-          - docs/OCP/OCPServiceDefinition.md
+
   
