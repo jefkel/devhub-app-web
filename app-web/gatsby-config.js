@@ -142,7 +142,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-eventbrite',
       options: {
-        organizationId: 228490647317,
+        organizationId: 228490647317, //csi lab org id
         accessToken: process.env.EVENT_BRITE_API_KEY,
       },
     },
